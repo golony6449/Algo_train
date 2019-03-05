@@ -1,8 +1,8 @@
-time=int(raw_input())
+time=int(input())
 contain=[]
 
 for a in range(time):
-    para=raw_input().split()
+    para=input().split()
     length=len(contain)
     
     if para[0]=='push':
@@ -10,22 +10,25 @@ for a in range(time):
         
     elif para[0]=='pop':
         if length==0:
-            print -1
+            print (-1)
         else:
-            print contain[length-1]
+            print (contain[length-1])
             contain.remove(contain[length-1])
             
     elif para[0]=='size':
-        print length
+        print (length)
         
     elif para[0]=='empty':
         if length==0:
-            print 1
+            print(1)
         else:
-            print 0
+            print(0)
             
     elif para[0]=='top':
         if length==0:
-            print -1
+            print(-1)
         else:
-            print contain[length-1]
+            print (contain[length-1])
+    else:
+        continue
+    print(contain)

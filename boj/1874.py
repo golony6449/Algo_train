@@ -1,11 +1,11 @@
 def push(para):
     stack.append(para)
-    print '+'
+    print ('+')
 def pop():
-    print '-'
+    print ('-')
     output.append(stack.pop())
     
-time=int(raw_input())
+time=int(input())
 target=[]
 stack=[]
 output=[] #empty -> same as target
@@ -14,8 +14,9 @@ parameter=0 #
 
 #save input value in target
 for a in range(time):
-    k=int(raw_input())
+    k=int(input())
     target.append(k)
+    
 #find first value 
 for b in range(1,time+1):
     if b!=target[0]:
@@ -32,22 +33,22 @@ while True:
         if target[now_process]==stack[-1]:
             pop()
             now_process=now_process+1
-            print 'case1'
+            print ('case1')
         else:
             push(parameter)
             parameter=parameter+1
-            print 'case2'
+            print ('case2')
     except: #When the target is ascending order
         if target[now_process]==parameter:
             push(parameter)
             pop()
             now_process=now_process+1
             parameter=parameter+1
-            print 'case3'
+            print ('case3')
         else:
             push(parameter)
             parameter=parameter+1
-            print 'case4'
+            print ('case4')
     if time==len(output):
         break
 
